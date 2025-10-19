@@ -1,11 +1,19 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+import { ref } from 'vue'
+
+const items = ref([
+  "10 party hats",
+  "2 board games",
+  "20 cups"
+])
+
+</script>
 
 <template>
-  <h1>Hellow World of Vue</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <ul v-if="items">
+    <li v-for="(item, index) in items" :key="index">{{ index }}. {{ item }}</li>
+  </ul>
 </template>
 
 <style scoped></style>
