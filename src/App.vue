@@ -12,8 +12,26 @@ const items = ref([
 
 <template>
   <ul v-if="items">
-    <li v-for="(item, index) in items" :key="index">{{ index }}. {{ item }}</li>
+    <li v-for="(item, index) in items" :key="index">{{ index + 1 }}. {{ item }} +</li>
   </ul>
+
+  <li v-for="n in 10000" :key="n" style="display: inline-block;">{{ n }},&nbsp;</li>
 </template>
 
-<style scoped></style>
+<style scoped>
+ul{
+  background-color: green;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+
+  li{
+    background-color: #fff3;
+    border: 1px solid #fff8;
+    padding: 1rem;
+    color: #fff;
+
+  }
+}
+</style>
