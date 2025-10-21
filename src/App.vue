@@ -1,8 +1,8 @@
 <script setup lang="ts">
 
-import { ref } from 'vue'
+import { reactive } from 'vue'
 
-const items = ref([
+const items = reactive([
   "10 party hats",
   "2 board games",
   "20 cups"
